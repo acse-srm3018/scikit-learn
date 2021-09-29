@@ -851,7 +851,7 @@ class SelectFwe(_BaseFilter):
     def _get_support_mask(self):
         check_is_fitted(self)
 
-        return self.pvalues_ < self.alpha / len(self.pvalues_)
+        return self.pvalues_ <= self.alpha / len(self.pvalues_)
 
 
 ######################################################################
